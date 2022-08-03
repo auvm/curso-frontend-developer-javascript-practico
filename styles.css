@@ -89,7 +89,7 @@
   /*------------ Desktop menu styles ------------ */
 
   .desktop-menu {
-  /* add correc position */
+  /* add correct position */
       position: absolute;
       top: 60px;
       right: 54px;
@@ -97,11 +97,11 @@
   /* add background color for correct presentation */
       background-color: var(--white);
 
-    width: 100px;
-    height: auto;
-    border: 1px solid var(--very-light-pink);
-    border-radius: 6px;
-    padding: 20px 20px 0 20px;
+      width: 100px;
+      height: auto;
+      border: 1px solid var(--very-light-pink);
+      border-radius: 6px;
+      padding: 20px 20px 0 20px;
   }
 
   .desktop-menu ul {
@@ -131,16 +131,66 @@
     display: inline-block;
   }
 
+  /* ------------ Mobile menu ------------ */
+
+  .mobile-menu {
+    /* padding: 24px; <--- no longer necessary */
+    /* add correct position */
+    position: absolute;
+    top: 61px;
+    
+    
+    /* add background color for correct presentation */
+    background-color: var(--white);
+
+  }
+  .mobile-menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    /* margin-bottom: 24px; */
+  }
+  .mobile-menu ul {
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+  }
+  .mobile-menu ul:nth-child(1) {
+    border-bottom: 1px solid var(--very-light-pink);
+  }
+  .mobile-menu ul li {
+    margin-bottom: 24px;
+  }
+  .email {
+    font-size: var(--sm);
+    font-weight: 300 !important;
+  }
+  .sign-out {
+    font-size: var(--sm);
+    color: var(--hospital-green) !important;
+  }
+
   /* ------------ media queries ------------ */
 
   @media (max-width: 640px) {
     .menu {
       display: block;
+      
     }
     .navbar-left ul {
       display: none;
     }
     .navbar-email {
+      display: none;
+    }
+
+    .desktop-menu{
+      display: none;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .mobile-menu{
       display: none;
     }
   }
